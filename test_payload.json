@@ -1,0 +1,31 @@
+{
+  "object_kind": "merge_request",
+  "user": {
+    "name": "Test User",
+    "username": "testuser"
+  },
+  "project": {
+    "path_with_namespace": "mycompany/myproject"
+  },
+  "object_attributes": {
+    "iid": 123,
+    "title": "Test MR: Add new feature",
+    "action": "open",
+    "state": "opened",
+    "source_branch": "feature/test-branch",
+    "target_branch": "main",
+    "web_url": "https://gitlab.example.com/mycompany/myproject/-/merge_requests/123"
+  },
+  "assignees": [
+    {
+      "name": "John Doe",
+      "username": "johndoe"
+    }
+  ],
+  "reviewers": [
+    {
+      "name": "Jane Smith",
+      "username": "janesmith"
+    }
+  ]
+}
