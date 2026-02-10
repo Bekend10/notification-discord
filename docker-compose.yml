@@ -1,15 +1,9 @@
 services:
   gitlab-discord:
     build: .
-    container_name: gitlab-discord-notifier
     ports:
       - "8000:8000"
-    env_file:
-      - .env
+    environment:
+      DISCORD_WEBHOOK_URL: "https://discordapp.com/api/webhooks/1470227849641459742/9DBDzwPy7p5rIWtOR-8WJs96zWqHj0WXm7O11BhBWdA3hDPsUJUSH3eKq_B2NynlQ9nC"
+      GITLAB_WEBHOOK_TOKEN: "chamchi123"
     restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s

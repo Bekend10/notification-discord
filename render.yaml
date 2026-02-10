@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: gitlab-discord-notifier
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DISCORD_WEBHOOK_URL
+        sync: false
+      - key: GITLAB_WEBHOOK_TOKEN
+        sync: false
+      - key: PORT
+        value: 8000
